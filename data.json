@@ -1,0 +1,188 @@
+{
+    "aqis": [
+        {
+            "aqi": 142,
+            "aqi_measure_time": "2022-08-25 10:46:00.651000 +00:00",
+            "station_id": "ea2464b0-4dd1-43a7-8613-c7517788d988"
+        },
+        {
+            "aqi": 132,
+            "aqi_measure_time": "2022-08-25 10:46:01.059000 +00:00",
+            "station_id": "f507751f-cfb8-4f09-ae07-dd6451ad131f"
+        },
+        {
+            "aqi": 124,
+            "aqi_measure_time": "2022-08-25 10:46:01.466000 +00:00",
+            "station_id": "05d5c8f1-229d-473f-a926-0b0fb6ee946f"
+        },
+        {
+            "aqi": 122,
+            "aqi_measure_time": "2022-08-25 10:46:02.184000 +00:00",
+            "station_id": "3a2ebf6e-31de-4576-9b26-90bf86e9ed51"
+        },
+        {
+            "aqi": 151,
+            "aqi_measure_time": "2022-08-25 10:46:02.796000 +00:00",
+            "station_id": "18e45383-ebf9-47c7-b948-0af6a5df9f36"
+        },
+        {
+            "aqi": 124,
+            "aqi_measure_time": "2022-08-25 10:46:03.411000 +00:00",
+            "station_id": "6e41d103-15ac-435e-ab96-a0d8e7755b37"
+        },
+        {
+            "aqi": 107,
+            "aqi_measure_time": "2022-08-25 10:46:03.923000 +00:00",
+            "station_id": "8475832b-e88d-449a-933d-64b1dad7d7c5"
+        },
+        {
+            "aqi": 109,
+            "aqi_measure_time": "2022-08-25 10:46:04.334000 +00:00",
+            "station_id": "7f5578b5-4e29-43e4-9814-3cebf106386c"
+        },
+        {
+            "aqi": 132,
+            "aqi_measure_time": "2022-08-25 10:46:04.742000 +00:00",
+            "station_id": "5f3d3b6a-9576-4212-9d20-2a6a75d5f283"
+        },
+        {
+            "aqi": 102,
+            "aqi_measure_time": "2022-08-25 10:46:05.107000 +00:00",
+            "station_id": "eae22610-49b1-406e-bc1f-c89a8baa841b"
+        },
+        {
+            "aqi": 107,
+            "aqi_measure_time": "2022-08-25 10:46:05.561000 +00:00",
+            "station_id": "451eb6a4-f058-4755-a29e-b65e1e349f4b"
+        },
+        {
+            "aqi": 109,
+            "aqi_measure_time": "2022-08-25 10:46:06.280000 +00:00",
+            "station_id": "cfd2c4ca-3dc1-4141-8a93-c9475667f2c8"
+        },
+        {
+            "aqi": 124,
+            "aqi_measure_time": "2022-08-25 10:46:06.895000 +00:00",
+            "station_id": "a5b3ea55-6399-4327-9ca5-7f487dbc6158"
+        },
+        {
+            "aqi": 109,
+            "aqi_measure_time": "2022-08-25 10:46:07.405000 +00:00",
+            "station_id": "490cca04-fabd-4e05-9b59-9c297b1ec120"
+        }
+    ],
+    "stations": [
+        {
+            "id": "ea2464b0-4dd1-43a7-8613-c7517788d988",
+            "geopoint": {
+                "x": 28.6488,
+                "y": 77.3153
+            },
+            "station_name": "Anand Vihar, Delhi"
+        },
+        {
+            "id": "f507751f-cfb8-4f09-ae07-dd6451ad131f",
+            "geopoint": {
+                "x": 28.6343,
+                "y": 77.2004
+            },
+            "station_name": "Mandir Marg, Delhi"
+        },
+        {
+            "id": "05d5c8f1-229d-473f-a926-0b0fb6ee946f",
+            "geopoint": {
+                "x": 28.7332,
+                "y": 77.1716
+            },
+            "station_name": "ITI Jahangirpuri, Delhi"
+        },
+        {
+            "id": "3a2ebf6e-31de-4576-9b26-90bf86e9ed51",
+            "geopoint": {
+                "x": 28.71,
+                "y": 77.2462
+            },
+            "station_name": "Sonia Vihar Water Treatment Plant DJB, Delhi"
+        },
+        {
+            "id": "18e45383-ebf9-47c7-b948-0af6a5df9f36",
+            "geopoint": {
+                "x": 28.6126,
+                "y": 77.2364
+            },
+            "station_name": "Major Dhyan Chand National Stadium, Delhi"
+        },
+        {
+            "id": "6e41d103-15ac-435e-ab96-a0d8e7755b37",
+            "geopoint": {
+                "x": 28.701,
+                "y": 77.1649
+            },
+            "station_name": "Delhi Institute of Tool Engineering, Wazirpur, Delhi"
+        },
+        {
+            "id": "8475832b-e88d-449a-933d-64b1dad7d7c5",
+            "geopoint": {
+                "x": 28.5968,
+                "y": 77.1869
+            },
+            "station_name": "New Delhi US Embassy, Delhi"
+        },
+        {
+            "id": "7f5578b5-4e29-43e4-9814-3cebf106386c",
+            "geopoint": {
+                "x": 28.6375,
+                "y": 77.1558
+            },
+            "station_name": "Pusa, Delhi"
+        },
+        {
+            "id": "5f3d3b6a-9576-4212-9d20-2a6a75d5f283",
+            "geopoint": {
+                "x": 28.671,
+                "y": 77.3147
+            },
+            "station_name": "ITI Shahdra, Jhilmil Industrial Area, Delhi"
+        },
+        {
+            "id": "eae22610-49b1-406e-bc1f-c89a8baa841b",
+            "geopoint": {
+                "x": 28.583,
+                "y": 77.2342
+            },
+            "station_name": "Jawaharlal Nehru Stadium, Delhi"
+        },
+        {
+            "id": "451eb6a4-f058-4755-a29e-b65e1e349f4b",
+            "geopoint": {
+                "x": 28.5504,
+                "y": 77.1852
+            },
+            "station_name": "R.K. Puram, Delhi"
+        },
+        {
+            "id": "cfd2c4ca-3dc1-4141-8a93-c9475667f2c8",
+            "geopoint": {
+                "x": 28.6959,
+                "y": 77.181
+            },
+            "station_name": "Satyawati College, Delhi"
+        },
+        {
+            "id": "a5b3ea55-6399-4327-9ca5-7f487dbc6158",
+            "geopoint": {
+                "x": 28.6223,
+                "y": 77.2852
+            },
+            "station_name": "Mother Dairy Plant, Parparganj, Delhi"
+        },
+        {
+            "id": "490cca04-fabd-4e05-9b59-9c297b1ec120",
+            "geopoint": {
+                "x": 28.5669,
+                "y": 77.2513
+            },
+            "station_name": "PGDAV College, Sriniwaspuri, Delhi"
+        }
+    ]
+}
