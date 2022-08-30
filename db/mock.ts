@@ -82,13 +82,13 @@ const mockQueries = {
     },
 
     getNearestStation: async (lat: number, lon: number) => {
-        let minDistance = 0;
+        let minDistance = Number.MAX_VALUE;
         let minDistanceStationId;
         for (let i = 0; i < data.stations.length; i++) {
             const stationLat = data.stations[i].geopoint.x
             const stationLon = data.stations[i].geopoint.y
             const earthDistance = findEarthDistance(lat, lon, stationLat, stationLon)
-            if (minDistance < earthDistance) {
+            if (minDistance > earthDistance) {
                 minDistance = earthDistance
                 minDistanceStationId = data.stations[i].id
             }
