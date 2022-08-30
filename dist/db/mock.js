@@ -78,13 +78,13 @@ const mockQueries = {
         return allStations;
     }),
     getNearestStation: (lat, lon) => __awaiter(void 0, void 0, void 0, function* () {
-        let minDistance = 0;
+        let minDistance = Number.MAX_VALUE;
         let minDistanceStationId;
         for (let i = 0; i < data_json_1.default.stations.length; i++) {
             const stationLat = data_json_1.default.stations[i].geopoint.x;
             const stationLon = data_json_1.default.stations[i].geopoint.y;
             const earthDistance = findEarthDistance(lat, lon, stationLat, stationLon);
-            if (minDistance < earthDistance) {
+            if (minDistance > earthDistance) {
                 minDistance = earthDistance;
                 minDistanceStationId = data_json_1.default.stations[i].id;
             }
