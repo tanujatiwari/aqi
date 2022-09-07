@@ -3,3 +3,5 @@
 /pgdata
 /cache
 database.json
+/coverage
+.idea
