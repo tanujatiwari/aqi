@@ -49,7 +49,7 @@ class Cron {
 // const cronObject = new Cron(new DatabaseQueries())
 const cronObject = new Cron(new MockDatabaseQueries())
 
-const job = cron.schedule('* * * * *', async () => {
+const job = cron.schedule('0 0 */1 * * *', async () => {
     cronObject.lockCron()
 });
 

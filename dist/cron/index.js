@@ -55,7 +55,7 @@ class Cron {
 }
 // const cronObject = new Cron(new DatabaseQueries())
 const cronObject = new Cron(new mock_1.MockDatabaseQueries());
-const job = node_cron_1.default.schedule('* * * * *', () => __awaiter(void 0, void 0, void 0, function* () {
+const job = node_cron_1.default.schedule('0 0 */1 * * *', () => __awaiter(void 0, void 0, void 0, function* () {
     cronObject.lockCron();
 }));
 exports.default = job;
