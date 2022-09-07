@@ -1,16 +1,18 @@
 import cron from 'node-cron'
 import axios from 'axios'
 import client from '../redis'
-import { DatabaseService,DatabaseQueries } from '../db'
+import { DatabaseService, DatabaseQueries } from '../db/index'
+import { MockDatabaseQueries, MockDatabaseService } from '../db/mock'
 
 class Cron {
-    private databaseService: DatabaseService
+    private databaseService: MockDatabaseService
 
-    constructor(databaseService: DatabaseService) {
+    constructor(databaseService: MockDatabaseService) {
         this.databaseService = databaseService
     }
 
     lockCron = async () => {
+        // console.log(await client.del('cron:lock'))
         const res = await client.set('cron:lock', `${process.pid}`, { NX: true })
         if (res !== "OK") {
             return console.log('Already locked. returning from process id', process.pid)
@@ -30,7 +32,6 @@ class Cron {
     }
 
     releaseKey = async (key: string, value: number) => {
-        console.log('I am hereeee-----')
         const keyValue = await client.get(key)
         const valueToCompare = value.toString()
         if (keyValue === null) {
@@ -45,10 +46,10 @@ class Cron {
     }
 }
 
-const cronObject = new Cron(new DatabaseQueries())
+// const cronObject = new Cron(new DatabaseQueries())
+const cronObject = new Cron(new MockDatabaseQueries())
 
 const job = cron.schedule('* * * * *', async () => {
-    console.log('fuck this shit')
     cronObject.lockCron()
 });
 

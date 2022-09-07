@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 class UserControllers {
-    constructor(datbaseService) {
+    constructor(databaseService) {
         this.home = (req, res, next) => __awaiter(this, void 0, void 0, function* () {
             try {
                 const { date, lat, lon } = req.body;
@@ -23,13 +23,14 @@ class UserControllers {
                 const nearestStationId = yield this.databaseService.getNearestStation({ lat, lon });
                 const isoDate = new Date(date).toISOString();
                 const aqis = yield this.databaseService.getAqi(isoDate, nearestStationId);
-                res.json(aqis);
+                console.log({ data: aqis });
+                return res.json({ data: aqis });
             }
             catch (e) {
                 next(e);
             }
         });
-        this.databaseService = datbaseService;
+        this.databaseService = databaseService;
     }
     notFound(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {

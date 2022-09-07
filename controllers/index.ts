@@ -6,8 +6,8 @@ import { DatabaseService } from '../db/index'
 class UserControllers {
     private databaseService: MockDatabaseService
 
-    constructor(datbaseService: MockDatabaseService) {
-        this.databaseService = datbaseService;
+    constructor(databaseService: MockDatabaseService) {
+        this.databaseService = databaseService;
     }
 
     home = async (req: Request, res: Response, next: NextFunction) => {
@@ -22,7 +22,8 @@ class UserControllers {
             const nearestStationId = await this.databaseService.getNearestStation({ lat, lon })
             const isoDate = new Date(date).toISOString()
             const aqis = await this.databaseService.getAqi(isoDate, nearestStationId)
-            res.json(aqis)
+            console.log({data:aqis})
+            return res.json({ data: aqis })
         }
         catch (e) {
             next(e)

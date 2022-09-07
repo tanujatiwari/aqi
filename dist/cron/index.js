@@ -15,10 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const node_cron_1 = __importDefault(require("node-cron"));
 const axios_1 = __importDefault(require("axios"));
 const redis_1 = __importDefault(require("../redis"));
-const db_1 = require("../db");
+const mock_1 = require("../db/mock");
 class Cron {
     constructor(databaseService) {
         this.lockCron = () => __awaiter(this, void 0, void 0, function* () {
+            // console.log(await client.del('cron:lock'))
             const res = yield redis_1.default.set('cron:lock', `${process.pid}`, { NX: true });
             if (res !== "OK") {
                 return console.log('Already locked. returning from process id', process.pid);
@@ -37,7 +38,6 @@ class Cron {
             this.releaseKey('cron:lock', process.pid);
         });
         this.releaseKey = (key, value) => __awaiter(this, void 0, void 0, function* () {
-            console.log('I am hereeee-----');
             const keyValue = yield redis_1.default.get(key);
             const valueToCompare = value.toString();
             if (keyValue === null) {
@@ -53,9 +53,9 @@ class Cron {
         this.databaseService = databaseService;
     }
 }
-const cronObject = new Cron(new db_1.DatabaseQueries());
+// const cronObject = new Cron(new DatabaseQueries())
+const cronObject = new Cron(new mock_1.MockDatabaseQueries());
 const job = node_cron_1.default.schedule('* * * * *', () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('fuck this shit');
     cronObject.lockCron();
 }));
 exports.default = job;
